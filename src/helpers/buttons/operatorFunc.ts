@@ -5,9 +5,11 @@ function operatorFunctionHelper({ value: currNum, setValue: setCurrNum }: Props,
     const operation = `${oldNum}${currOp}${currNum}`
     const evalOp = evalExpression(operation)
     if (currOp != '') {
-        if (!Number.isNaN(evalOp)) {
-            if (evalOp.length > 9) { setErrText('TOO LONG'); setCurrNum(''); setCurrOp(''); setOldNum('') } else { setCurrNum(evalOp); setCurrOp(''); setOldNum(''); }
-        } else { setErrText(evalOp); setCurrNum(''); setOldNum(''); setOldNum('') }
-    } else { setCurrOp(btnOperator); setOldNum(currNum); setCurrNum(btnOperator) }
+        if (currNum === '') { setCurrOp(btnOperator); return }
+        if (!Number.isNaN(Number(evalOp))) {
+            if (String(evalOp).length > 9) { setErrText('TOO LONG'); setCurrNum(''); setOldNum('') }
+            else { setOldNum(evalOp); setCurrNum(''); setCurrOp(btnOperator) }
+        } else { setErrText(evalOp); setCurrNum(''); setOldNum(''); setCurrOp('') }
+    } else { setCurrOp(btnOperator); setOldNum(currNum); setCurrNum('') }
 }
 export default operatorFunctionHelper

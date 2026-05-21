@@ -4,7 +4,7 @@ function equalFunctionHelper({ value: currNum, setValue: setCurrNum }: Props, { 
     { setValue: setErrText }: Props, { value: currOp, setValue: setCurrOp }: Props): void {
     const operation = `${oldNum}${currOp}${currNum}`
     const evalOp = evalExpression(operation)
-    if (!Number.isNaN(evalOp)) {
+    if (!Number.isNaN(Number(evalOp))) {
         if (evalOp.length > 9) { setErrText('TOO LONG'); setCurrNum(''); setCurrOp(''); setOldNum('') } else { setCurrNum(evalOp); setCurrOp(''); setOldNum(''); }
     } else { setErrText(evalOp); setCurrNum(''); setOldNum(''); setOldNum('') }
 }

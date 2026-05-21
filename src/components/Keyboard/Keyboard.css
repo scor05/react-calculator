@@ -2,8 +2,10 @@
 
 .keyboard {
     display: grid;
-    margin: 40px;
-    grid-template-rows: 75px 75px 75px 100px;
-    grid-template-columns: 75px 75px 75px 100px;
-    gap: 10px;
+    margin: 20px;
+    width: 460px;
+    height: 460px;
+    grid-template-rows: 100px 100px 100px 120px;
+    grid-template-columns: 100px 100px 100px 120px;
+    gap: 13px;
 }
