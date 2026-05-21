@@ -15,4 +15,4 @@ export type CalculatorProps = {
 export type DisplayProps = { text: string, config: Settings }
 export type KeyboardProps = { currNum: Props, oldNum: Props, currOp: Props, errText: Props }
 export type ButtonType = 'number' | 'operator' | 'equal' | 'clear'
-export type ButtonProps = KeyboardProps & { label: string, buttonType: ButtonType }
+export type ButtonProps = KeyboardProps & { label: string, buttonType: ButtonType, btnRow: string }

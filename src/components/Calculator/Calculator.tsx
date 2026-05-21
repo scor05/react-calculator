@@ -9,7 +9,7 @@ function Calculator({ currNum, setCurrNum, oldNum, setOldNum, currOp, setCurrOp,
         currOp: { value: currOp, setValue: setCurrOp },
         errText: { value: errText, setValue: setErrText },
     }
-    const displayText = errText === '' ? (currNum || (currOp ? oldNum : '-')) : errText
-    return <div className="content"><h1 className="content-h1">The Most Blazingly Fast Calculator.</h1><div className="calculator"><Display text={displayText} config={settings} /><Keyboard {...stateProps} /></div></div>
+    const displayText = errText === '' ? currNum : errText
+    return <div className="content"><h1 className="content-h1">The Most Blazingly Fast Calculator.</h1><h2 className="content-h2">Now at your fingertips</h2><div className="calculator"><Display text={displayText} config={settings} /><Keyboard {...stateProps} /></div></div>
 }
 export default Calculator

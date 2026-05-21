@@ -8,8 +8,8 @@ function operatorFunctionHelper({ value: currNum, setValue: setCurrNum }: Props,
         if (currNum === '') { setCurrOp(btnOperator); return }
         if (!Number.isNaN(Number(evalOp))) {
             if (String(evalOp).length > 9) { setErrText('TOO LONG'); setCurrNum(''); setOldNum('') }
-            else { setOldNum(evalOp); setCurrNum(''); setCurrOp(btnOperator) }
+            else { setOldNum(evalOp); setCurrNum(evalOp); setCurrOp(btnOperator) }
         } else { setErrText(evalOp); setCurrNum(''); setOldNum(''); setCurrOp('') }
-    } else { setCurrOp(btnOperator); setOldNum(currNum); setCurrNum('') }
+    } else if (currNum !== '') { setCurrOp(btnOperator); setOldNum(currNum); setCurrNum('') }
 }
 export default operatorFunctionHelper

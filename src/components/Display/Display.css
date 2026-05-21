@@ -1,5 +1,14 @@
 @import "../../helpers/css/Font.css";
 
+@keyframes slideDown {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .display {
     min-height: 200px;
     width: 440px;
@@ -9,7 +18,11 @@
     border-radius: 15px;
     background-color: #2b2b2b;
     color: #56d7ff;
+    opacity: 0;
     font-size: 80px;
     font-family: 'SF Pro Regular', sans-serif;
-    padding-right: 20px;
+    padding-right: 15px;
+    padding-left: 5px;
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 2.25s;
 }
