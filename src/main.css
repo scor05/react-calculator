@@ -32,9 +32,9 @@ body {
         #5ea4ff,
         #4287f5,
         #4842f5,
-        #8c25fa,
+        #7340de,
         #500363
     );
     background-size: 300% 300%;
-    animation: gradientShift 10s ease-in-out infinite;
+    animation: gradientShift 20s ease-in-out infinite;
 }
