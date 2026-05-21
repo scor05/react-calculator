@@ -1,5 +1,6 @@
 import Button from '../Button/Button'
-import type { ButtonType, KeyboardProps } from '../../helpers/props'
+import './Keyboard.css'
+import type { ButtonType, KeyboardProps } from '../../helpers/types/props'
 const buttons: Array<[string, ButtonType]> = [
     ['7', 'number'], ['8', 'number'], ['9', 'number'], ['/', 'operator'],
     ['4', 'number'], ['5', 'number'], ['6', 'number'], ['*', 'operator'],

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'SF Pro Regular';
+    src: url('../../../assets/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Thin';
+    src: url('../../../assets/fonts/SFPRODISPLAYTHINITALIC.OTF') format('opentype');
+    font-weight: 2000;
+    font-style: normal;
+}

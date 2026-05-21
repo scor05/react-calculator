@@ -1,8 +1,9 @@
-import clearFunctionHelper from '../../helpers/clearFunc'
-import equalFunctionHelper from '../../helpers/equalFunc'
-import numberFunctionHelper from '../../helpers/numberFunc'
-import operatorFunctionHelper from '../../helpers/operatorFunc'
-import type { ButtonProps } from '../../helpers/props'
+import clearFunctionHelper from '../../helpers/buttons/clearFunc'
+import equalFunctionHelper from '../../helpers/buttons/equalFunc'
+import numberFunctionHelper from '../../helpers/buttons/numberFunc'
+import operatorFunctionHelper from '../../helpers/buttons/operatorFunc'
+import type { ButtonProps } from '../../helpers/types/props'
+import './Button.css'
 
 function Button({ label, buttonType, currNum, oldNum, currOp, errText }: ButtonProps) {
     const handleClick = () => {

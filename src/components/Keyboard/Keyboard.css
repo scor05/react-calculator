@@ -1,0 +1,9 @@
+@import "../../helpers/css/Font.css";
+
+.keyboard {
+    display: grid;
+    margin: 40px;
+    grid-template-rows: 75px 75px 75px 100px;
+    grid-template-columns: 75px 75px 75px 100px;
+    gap: 10px;
+}
