@@ -11,6 +11,6 @@ function Button({ label, buttonType, currNum, oldNum, currOp, errText, btnRow }:
         if (buttonType === 'equal') equalFunctionHelper(currNum, oldNum, errText, currOp)
         if (buttonType === 'clear') clearFunctionHelper(currOp, oldNum, currNum, errText)
     }
-    return <button type="button" onClick={handleClick} className={`button-${buttonType} button button-row-${btnRow}`}>{label}</button>
+    return <button type="button" onClick={handleClick} className={`calc-button button-${buttonType} button-row-${btnRow}`}>{label}</button>
 }
 export default Button

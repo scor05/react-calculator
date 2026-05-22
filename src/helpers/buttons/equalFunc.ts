@@ -5,7 +5,15 @@ function equalFunctionHelper({ value: currNum, setValue: setCurrNum }: Props, { 
     const operation = `${oldNum}${currOp}${currNum}`
     const evalOp = evalExpression(operation)
     if (!Number.isNaN(Number(evalOp))) {
-        if (evalOp.length > 9) { setErrText('TOO LONG'); setCurrNum(''); setCurrOp(''); setOldNum('') } else { setCurrNum(evalOp); setCurrOp(''); setOldNum(''); }
+        const num = Number(evalOp)
+        if (Number.isInteger(num)) {
+            if (String(num).length > 9 || num < 0) { setErrText('ERROR'); setCurrNum(''); setOldNum('') }
+            else { setCurrOp(''); setCurrNum(evalOp); setOldNum(evalOp) }
+        } else {
+            const chars = evalOp.split('.')[0].length
+            if (String(num.toFixed(2)).length > 9 || num < 0) { setErrText('ERROR'); setCurrNum(''); setOldNum('') }
+            else { setCurrOp(''); setCurrNum(num.toFixed(8 - chars)); setOldNum(num.toFixed(8 - chars)) }
+        }
     } else { setErrText(evalOp); setCurrNum(''); setOldNum(''); setOldNum('') }
 }
 export default equalFunctionHelper
