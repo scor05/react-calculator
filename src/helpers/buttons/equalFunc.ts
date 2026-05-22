@@ -14,6 +14,6 @@ function equalFunctionHelper({ value: currNum, setValue: setCurrNum }: Props, { 
             if (String(num.toFixed(2)).length > 9 || num < 0) { setErrText('ERROR'); setCurrNum(''); setOldNum('') }
             else { setCurrOp(''); setCurrNum(num.toFixed(8 - chars)); setOldNum(num.toFixed(8 - chars)) }
         }
-    } else { setErrText(evalOp); setCurrNum(''); setOldNum(''); setOldNum('') }
+    } else { setErrText('ERROR'); setCurrNum(''); setOldNum(''); setCurrOp('') }
 }
 export default equalFunctionHelper

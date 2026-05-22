@@ -12,9 +12,9 @@ function operatorFunctionHelper({ value: currNum, setValue: setCurrNum }: Props,
                 else { setCurrOp(btnOperator); setCurrNum(evalOp); setOldNum(evalOp) }
             } else {
                 if (String(num.toFixed(2)).length > 9 || num < 0) { setErrText('ERROR'); setCurrNum(''); setOldNum('') }
-                else { setCurrOp(btnOperator); setCurrNum(evalOp); setOldNum(evalOp) }
+                else { setCurrOp(btnOperator); setCurrNum(num.toFixed(8 - evalOp.split('.')[0].length)); setOldNum(num.toFixed(8 - evalOp.split('.')[0].length)) }
             }
-        } else { setErrText(evalOp); setCurrNum(''); setOldNum(''); setCurrOp('') }
+        } else { setErrText('ERROR'); setCurrNum(''); setOldNum(''); setCurrOp('') }
     } else if (currNum !== '') { setCurrOp(btnOperator); setOldNum(currNum); setCurrNum('') }
 }
 export default operatorFunctionHelper
