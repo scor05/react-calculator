@@ -9,7 +9,8 @@ const buttons: Array<[string, ButtonType, string]> = [
 ]
 function Keyboard(props: KeyboardProps) {
     return <div className="keyboard">{
-        buttons.map(([label, buttonType, row]) => <Button key={label} label={label} buttonType={buttonType} btnRow={row} {...props} />)}
+        buttons.map(([label, buttonType, row]) =>
+            <Button key={label} label={label} buttonType={buttonType} btnRow={row} {...props} />)}
     </div>
 }
 export default Keyboard

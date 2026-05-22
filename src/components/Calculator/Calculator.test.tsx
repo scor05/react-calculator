@@ -9,7 +9,9 @@ function TestCalculator() {
     const [oldNum, setOldNum] = useState('')
     const [currOp, setCurrOp] = useState('')
     const [errText, setErrText] = useState('')
-    return <Calculator currNum={currNum} setCurrNum={setCurrNum} oldNum={oldNum} setOldNum={setOldNum} currOp={currOp} setCurrOp={setCurrOp} errText={errText} setErrText={setErrText} settings={{ maxLength: 120, maxChars: 9 }} />
+    return <Calculator currNum={currNum} setCurrNum={setCurrNum} oldNum={oldNum} setOldNum={setOldNum}
+        currOp={currOp} setCurrOp={setCurrOp} errText={errText} setErrText={setErrText}
+        settings={{ maxLength: 120, maxChars: 9 }} />
 }
 
 async function press(keys: string) {
